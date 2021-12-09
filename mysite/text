@@ -19,3 +19,5 @@ python manage.py migrate books 0002
 python manage.py migrate books zero
 
 除了改变数据库架构外，你还可以使用迁移来改变数据库本身的数据，如果你想的话，还可以结合架构来改变。
+
+大幅度
