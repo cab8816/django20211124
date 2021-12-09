@@ -1,0 +1,21 @@
+admin
+username:cab88
+password:321
+
+python manage.py createsupperuser
+
+pip install reportlab
+
+假如改变了网站名，那么在运行配置文件里面也要更改
+
+2、如果你不知道 Django 源码在你系统的哪个位置，运行以下命令：
+python -c "import django; print(django.__path__)"
+
+3、几个常用的与迁移交互的命令，即 Django 处理数据库架构的方式
+撤销迁移
+可以通过 migrate 传递上一次迁移的编号来撤销迁移。例如，要撤销迁移 books.0003
+python manage.py migrate books 0002
+如果要撤消应用于一个应用的所有迁移，请使用名称 zero：
+python manage.py migrate books zero
+
+除了改变数据库架构外，你还可以使用迁移来改变数据库本身的数据，如果你想的话，还可以结合架构来改变。

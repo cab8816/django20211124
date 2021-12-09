@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+{% if books %}
+  <p>找到{{ books|length }} 书 {{ books|pluralize }}. </p>
+    <ul>
+    {% for book in books %}
+    <li>{{ book.title }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+   <p>没有找到满足条件的书</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+
+tr.aaa td.c1{
+    color: red;
+}
+tr.aaa td.c2{
+    color: blueviolet;
+}
+
+tr.aaa td.c3{
+    color: sienna;
+}
+
+.bbb td{
+    color: blue;
+}
+
+.ccc td{
+    color: green;
+}
+
+a:hover{
+    color: black;
+}

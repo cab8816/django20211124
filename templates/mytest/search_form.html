@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+{% if error %}
+    <p style="color: red"> 请输入一个查找关键词。</p>
+{% endif %}
+<form action="" method="get">
+    <input type="text" name="q">
+    <input type="submit" value="search">
+
+</form>
+</body>
+</html>

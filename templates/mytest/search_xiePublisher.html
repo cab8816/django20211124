@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search xie publisher</title>
+</head>
+<body>
+{% for xie in xies %}
+    <ul>
+    <tr>
+        <td> {{ xie.first_name }}</td><td>{{ xie.last_name }}</td><td>{{ cherry }}</td>
+        <td> {{ xie.name }}</td>   <td>{{ xie.address }}</td>
+    </tr>
+
+    </ul>
+{% endfor %}
+</body>
+</html>

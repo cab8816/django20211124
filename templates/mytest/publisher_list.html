@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/xzq.css' %}">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<div class="container-fluid">
+
+    <!-- 轮播 -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- 指示符 -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>第一张图片描述标题</h3>
+                    <p>第一张图片描述内容显示在这里！！！</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+
+                    <h3>第二图片描述标题</h3>
+                    <a class="nav-link" href="#">
+                    <p>第二张图片描述内容显示在这里！！！</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg" class="d-block"
+                     style="width:100%">
+
+                <div class="carousel-caption">
+                    <h3>第三张图片描述标题</h3>
+                    <p>第三张图片描述内容显示在这里！！！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 左右切换按钮 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-2">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="col-sm-8">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>书名</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for apublisher in publisher %}
+                    <tr class="aaa">
+                        <td class="c1">{{ forloop.counter }}</td>
+                        <td class="c2">{{ apublisher.name }}</td>
+                        <td class="c3">{{ forloop.counter }}</td>
+                    </tr>
+                {% endfor %}
+
+
+            </table>
+
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+from django import forms
+
+
+class ContactForm(forms.Form):
+    subject = forms.CharField(max_length=100, min_length=10)
+    email = forms.EmailField(required=False,label='你的邮件地址')
+    message = forms.CharField(widget=forms.Textarea)
+
+    # def clean_message(self):
+    #     message = self.cleaned_data['message']
+    #     num_words = len(message.split())
+    #     if num_words < 4:
+    #         raise forms.ValidationError('Not enough words')
+    #     return message
+
+
+
+class UploadFileForm(forms.Form):
+    title = forms.CharField(max_length=50)
+    file = forms.FileField()
